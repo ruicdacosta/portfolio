@@ -97,12 +97,12 @@ function applyTheme(mode, scheme) {
     localStorage.setItem("colorMode", safeMode);
     localStorage.setItem("themeScheme", safeScheme);
   } catch {
-    // ignore if localStorage is unavailable
+    // localStorage might be blocked, ignore
   }
 }
 
-// Initialize theme from storage or defaults
-(function initTheme() {
+// Initialize theme from storage or defaults, after DOM is ready
+document.addEventListener("DOMContentLoaded", () => {
   let storedMode = "light";
   let storedScheme = "default";
 
@@ -114,7 +114,7 @@ function applyTheme(mode, scheme) {
   }
 
   applyTheme(storedMode, storedScheme);
-})();
+});
 
 // Toggle dark / light mode
 if (themeToggle) {

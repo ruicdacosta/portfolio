@@ -7,7 +7,7 @@
   padding: 0;
 }
 
-/* CSS variables for theming */
+/* Base theme (light, default) */
 :root {
   --bg: #f4f5f7;
   --bg-alt: #ffffff;
@@ -25,6 +25,20 @@
   --font-base: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* Explicit light mode (same as base, but ensures reset if needed) */
+:root[data-mode="light"] {
+  --bg: #f4f5f7;
+  --bg-alt: #ffffff;
+  --border-subtle: #e5e7eb;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+  --accent-strong: rgba(37, 99, 235, 0.12);
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --surface: #ffffff;
+  --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
 /* Dark mode overrides */
 :root[data-mode="dark"] {
   --bg: #020617;
@@ -39,12 +53,11 @@
   --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Retro scheme (colors + font flavour) */
+/* Retro scheme (accent + soft look) */
 :root[data-scheme="retro"] {
   --accent: #f97316;
   --accent-soft: rgba(249, 115, 22, 0.12);
   --accent-strong: rgba(249, 115, 22, 0.22);
-  --font-base: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* Linux terminal scheme (accent + monospace font) */
@@ -67,6 +80,7 @@ body {
   background: var(--bg);
   color: var(--text-main);
 }
+
 
 /* Layout helpers */
 .container {
