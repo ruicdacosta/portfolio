@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Rui Carvalho da Costa – Electrical and Computer Engineering</title>
+
   <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
   <!-- Header -->
   <header class="site-header">
@@ -16,6 +23,20 @@
       <a href="#top" class="logo">Rui Carvalho da Costa</a>
 
       <nav class="nav">
+        <!-- Theme controls -->
+        <div class="theme-controls">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            🌙
+          </button>
+
+          <label for="themePicker" class="theme-picker-label">Theme</label>
+          <select id="themePicker" class="theme-picker" aria-label="Select color theme">
+            <option value="default">Default</option>
+            <option value="retro">Retro</option>
+            <option value="terminal">Linux terminal</option>
+          </select>
+        </div>
+
         <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
           <span class="nav-toggle-line"></span>
           <span class="nav-toggle-line"></span>
@@ -23,9 +44,9 @@
 
         <ul class="nav-links" id="navLinks">
           <li><a href="#about">About</a></li>
-          <li><a href="#education">Academic Path</a></li>
+          <li><a href="#education">Journey</a></li>
           <li><a href="#interests">Interests</a></li>
-          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#hobbies">Hobbies & Languages</a></li>
           <li><a href="#publications">Publications</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -40,8 +61,8 @@
       <div class="container hero-inner">
         <div class="hero-left">
           <div class="profile-photo-wrapper">
-            <!-- TODO: put your real photo here (same file name as in your folder) -->
-            <img src="rui.jpg" alt="Portrait of Rui Carvalho da Costa" class="profile-photo">
+            <!-- Image now inside images/ folder -->
+            <img src="images/rui.jpg" alt="Portrait of Rui Carvalho da Costa" class="profile-photo">
           </div>
         </div>
 
@@ -50,14 +71,14 @@
           <h1>Rui Carvalho da Costa</h1>
 
           <p class="hero-subtitle">
-            Invited Assistant Lecturer | PhD Candidate | Researcher in AWES @ FEUP SYSTEC | ClimateTech
+            Invited Assistant Lecturer · PhD Candidate · Airborne Wind Energy Researcher @ FEUP
           </p>
 
           <p class="hero-description">
             I work on the optimization and control of renewable energy systems, with a particular focus on
-            <strong>airborne wind energy farms</strong>. My PhD, titled
-            <em>"Optimization of Layout and Operational Characteristics for Airborne Wind Energy Farms"</em>,
-            combines mathematical optimization, control, and power systems engineering.
+            <strong>airborne wind energy farms</strong>. My research develops mathematical optimization and control
+            methods for
+            <em>layout design, power smoothing and energy storage sizing</em> in Airborne Wind Energy Systems (AWES).
           </p>
 
           <div class="hero-meta">
@@ -75,8 +96,8 @@
             <div class="meta-item">
               <span class="meta-label">Teaching</span>
               <span class="meta-value">
-                Professor of Control (2024/2025)<br>
-                Professor of Algebra | Probabilities and Statistics (2025/2026)
+                Invited Assistant (Control), 2025<br>
+                Invited Assistant (Algebra), 2025/2026
               </span>
             </div>
           </div>
@@ -89,12 +110,12 @@
       </div>
     </section>
 
-    <!-- Academic Path -->
+    <!-- Timeline of Your Journey -->
     <section id="education" class="section">
       <div class="container">
         <div class="section-header">
-          <h2>Academic Path</h2>
-          <p>BSc, MSc and PhD in Electrical and Computer Engineering.</p>
+          <h2>Timeline of Your Journey</h2>
+          <p>Education, milestones and projects in Electrical and Computer Engineering.</p>
         </div>
 
         <div class="timeline">
@@ -104,12 +125,41 @@
             <div class="timeline-content">
               <h3>PhD in Electrical and Computer Engineering</h3>
               <p class="timeline-meta">
-                Faculty of Engineering, University of Porto (FEUP) · Porto, Portugal · Completed in [Year]
+                FEUP · Porto, Portugal · 2024 – 2028 (ongoing)
               </p>
               <p class="timeline-description">
-                Thesis: <em>"Optimization of Layout and Operational Characteristics for Airborne Wind Energy Farms"</em>.<br>
-                Research on the optimal design and operation of airborne wind energy farms, combining optimization,
-                power systems, and control.
+                Doctoral research in <strong>Airborne Wind Energy Systems</strong> with emphasis on optimization of
+                layout, power smoothing and energy storage sizing for airborne wind farms.
+              </p>
+            </div>
+          </article>
+
+          <!-- Invited Assistant -->
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Invited Assistant Lecturer</h3>
+              <p class="timeline-meta">
+                FEUP · Porto, Portugal · 2025 – present
+              </p>
+              <p class="timeline-description">
+                Teaching in <em>Control</em> and <em>Algebra</em> for Electrical and Computer Engineering students,
+                bridging rigorous theory with optimization and energy systems applications. :contentReference[oaicite:1]{index=1}
+              </p>
+            </div>
+          </article>
+
+          <!-- Advanced Studies -->
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Advanced Studies in Engineering Project</h3>
+              <p class="timeline-meta">
+                FEUP · Porto, Portugal · 2023 – 2024 · Grade: 19/20
+              </p>
+              <p class="timeline-description">
+                Advanced project work in engineering and related techniques, with a focus on energy and optimization
+                problems. :contentReference[oaicite:2]{index=2}
               </p>
             </div>
           </article>
@@ -120,11 +170,12 @@
             <div class="timeline-content">
               <h3>MSc in Electrical and Computer Engineering</h3>
               <p class="timeline-meta">
-                Faculty of Engineering, University of Porto (FEUP) · Porto, Portugal · [Year] – [Year]
+                FEUP · Porto, Portugal · 2021 – 2023
               </p>
               <p class="timeline-description">
-                Advanced training in electrical and computer engineering with a focus on systems, control,
-                and power/energy-related topics. Dissertation topic: <em>[Your MSc dissertation title]</em>.
+                Dissertation:
+                <em>"Layout Optimization and Power Averaging of an Airborne Wind Energy Farm"</em>, studying optimal
+                kite farm layout and synchronization strategies for power smoothing. :contentReference[oaicite:3]{index=3}
               </p>
             </div>
           </article>
@@ -133,13 +184,43 @@
           <article class="timeline-item">
             <div class="timeline-marker"></div>
             <div class="timeline-content">
-              <h3>BSc in Electrical and Computer Engineering</h3>
+              <h3>BSc in Engineering Sciences (ECE track, Energy major)</h3>
               <p class="timeline-meta">
-                Faculty of Engineering, University of Porto (FEUP) · Porto, Portugal · [Year] – [Year]
+                FEUP · Porto, Portugal · 2018 – 2021
               </p>
               <p class="timeline-description">
-                Foundational studies in electrical and computer engineering, including mathematics, programming,
-                electronics, systems, and control.
+                Foundations in mathematics, programming, electronics, systems and control, with a major in
+                <strong>Energy</strong>. :contentReference[oaicite:4]{index=4}
+              </p>
+            </div>
+          </article>
+
+          <!-- Research Projects -->
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Research Fellow – Airborne Wind & Microelectronics</h3>
+              <p class="timeline-meta">
+                ISR–Porto / FEUP · 2023 – present
+              </p>
+              <p class="timeline-description">
+                Participation in projects on airborne wind farm layout, power smoothing and microelectronics-related
+                applications, including KEFCODE and the Microelectronics Agenda. :contentReference[oaicite:5]{index=5}
+              </p>
+            </div>
+          </article>
+
+          <!-- Awards -->
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Awards & Recognition</h3>
+              <p class="timeline-meta">
+                2024 – present
+              </p>
+              <p class="timeline-description">
+                Best Presentation Award, Entrepreneurship and Innovation Award (BIP PROOF) and recognition by the EIT
+                Deep Tech Talent Initiative, among others. :contentReference[oaicite:6]{index=6}
               </p>
             </div>
           </article>
@@ -152,29 +233,29 @@
       <div class="container">
         <div class="section-header">
           <h2>Research & Engineering Interests</h2>
-          <p>Areas I am most interested in, both theoretically and practically.</p>
+          <p>Problems at the intersection of optimization, control and energy systems.</p>
         </div>
 
         <div class="interests-layout">
           <div class="interests-text">
             <p>
-              My work focuses on the modeling, optimization, and control of renewable energy systems,
-              especially <strong>airborne wind energy</strong> and related power system integration problems.
+              My work focuses on the modeling, optimization and control of renewable energy systems,
+              especially <strong>airborne wind energy farms</strong> and their integration into power systems.
             </p>
             <p>
-              I enjoy problems that combine rigorous mathematical formulations with practical engineering constraints,
-              from farm layout optimization to operational strategies and system-level integration.
+              I enjoy problems that require rigorous mathematical formulations while respecting practical engineering
+              constraints: farm layout design, power smoothing strategies, energy storage sizing and system-level
+              integration.
             </p>
           </div>
 
           <div class="interest-chips">
-            <!-- You can add/remove interests here -->
             <span class="chip">Airborne Wind Energy</span>
             <span class="chip">Renewable Energy Systems</span>
-            <span class="chip">Optimization</span>
+            <span class="chip">Optimization & Metaheuristics</span>
             <span class="chip">Power Systems</span>
             <span class="chip">Control Systems</span>
-            <span class="chip">Energy Systems Modeling</span>
+            <span class="chip">Energy Storage</span>
             <span class="chip">Operations Research</span>
             <span class="chip">Simulation & Numerical Methods</span>
           </div>
@@ -182,34 +263,34 @@
       </div>
     </section>
 
-    <!-- Hobbies -->
+    <!-- Hobbies & Languages -->
     <section id="hobbies" class="section">
       <div class="container">
         <div class="section-header">
-          <h2>Hobbies</h2>
+          <h2>Hobbies & Languages</h2>
           <p>What I enjoy outside of engineering and research.</p>
         </div>
 
         <div class="interests-layout">
           <div class="interests-text">
-            <!-- TODO: Replace this text with your real hobbies -->
             <p>
-              Outside of academia, I like to keep a balance between technical work and personal interests.
-              These activities help me recharge and often give me new perspectives on research problems.
-            </p>
-            <p>
-              Feel free to replace the examples below with your own hobbies (sports, arts, reading, music,
-              traveling, etc.).
+              Outside academia, I like to balance technical work with sports and reading. Physical training helps me
+              clear my mind and reading brings new ideas and perspectives that often feed back into my research.
             </p>
           </div>
 
           <div>
             <ul class="contact-list">
-              <!-- TODO: Replace each list item with your real hobbies -->
-              <li><strong>Example hobby 1:</strong> e.g. reading, science fiction, non-fiction.</li>
-              <li><strong>Example hobby 2:</strong> e.g. outdoor activities, hiking, running, cycling.</li>
-              <li><strong>Example hobby 3:</strong> e.g. music, playing an instrument, concerts.</li>
-              <li><strong>Example hobby 4:</strong> e.g. travel, exploring new places.</li>
+              <li>
+                <strong>Sports:</strong> tennis, running and gym workouts – staying active and competitive.
+              </li>
+              <li>
+                <strong>Reading:</strong> fiction and reflective literature, especially
+                <em>Métamorphosis</em> and <em>The Alchemist</em>.
+              </li>
+              <li>
+                <strong>Languages:</strong> Portuguese (native), English (B2) and French (A2). :contentReference[oaicite:7]{index=7}
+              </li>
             </ul>
           </div>
         </div>
@@ -221,67 +302,119 @@
       <div class="container">
         <div class="section-header">
           <h2>Publications & Papers</h2>
-          <p>A selection of peer-reviewed work and preprints. (Replace the examples with your real papers.)</p>
+          <p>Selected peer-reviewed work and preprints on airborne wind energy farms and energy systems. :contentReference[oaicite:8]{index=8}</p>
         </div>
 
         <div class="pub-filters">
           <button class="chip chip-filter active" data-filter="all">All</button>
           <button class="chip chip-filter" data-filter="journal">Journals</button>
+          <button class="chip chip-filter" data-filter="book">Book Chapters</button>
           <button class="chip chip-filter" data-filter="conference">Conferences</button>
           <button class="chip chip-filter" data-filter="preprint">Preprints</button>
         </div>
 
         <ol class="pub-list">
-          <!-- Example publication 1 -->
+          <!-- Journal article / preprint -->
           <li class="pub-item" data-type="journal">
             <p class="pub-title">
-              [Example] Layout Optimization for Airborne Wind Energy Farms in Complex Wind Conditions
+              Airborne Wind Energy Farms Layout: Synchronization Strategies for Power Smoothing
             </p>
             <p class="pub-authors">
-              Rui Carvalho da Costa, Coauthor A, Coauthor B
+              R. C. da Costa, M. C. R. M. Fernandes, L. A. C. Roque, L. T. Paiva, D. B. M. M. Fontes, F. A. C. C. Fontes
             </p>
             <p class="pub-meta">
-              <span class="pub-venue">Journal of Renewable Energy Optimization</span>,
+              <span class="pub-venue">Optimization Letters</span>,
+              <span class="pub-year">2025</span> (submitted, open access)
+            </p>
+            <div class="pub-links">
+              <a href="#" target="_blank" rel="noopener noreferrer">Preprint / Journal page</a>
+            </div>
+          </li>
+
+          <!-- Book chapter 1 -->
+          <li class="pub-item" data-type="book">
+            <p class="pub-title">
+              Airborne Wind Energy Farms: Layout Optimization Combining NSGA-II and BRKGA
+            </p>
+            <p class="pub-authors">
+              Rui Carvalho da Costa et al.
+            </p>
+            <p class="pub-meta">
+              <span class="pub-venue">Lecture Notes in Computer Science (Springer)</span>,
+              <span class="pub-year">2025</span> (in press)
+            </p>
+            <div class="pub-links">
+              <a href="https://doi.org/10.1007/978-3-031-81010-7_18" target="_blank" rel="noopener noreferrer">
+                DOI
+              </a>
+            </div>
+          </li>
+
+          <!-- Book chapter 2 -->
+          <li class="pub-item" data-type="book">
+            <p class="pub-title">
+              Improving Power Smoothing of Airborne Wind Energy Farms by Sizing an Energy Storage System
+            </p>
+            <p class="pub-authors">
+              R. C. da Costa et al.
+            </p>
+            <p class="pub-meta">
+              <span class="pub-venue">Lecture Notes on Electrical Engineering (Springer)</span>,
+              <span class="pub-year">2025</span> (in press)
+            </p>
+            <div class="pub-links">
+              <a href="#" target="_blank" rel="noopener noreferrer">Publisher page</a>
+            </div>
+          </li>
+
+          <!-- Conference paper – Layout -->
+          <li class="pub-item" data-type="conference">
+            <p class="pub-title">
+              Airborne Wind Energy Farms: Layout Optimization Combining NSGA-II and BRKGA
+            </p>
+            <p class="pub-authors">
+              Rui Carvalho da Costa et al.
+            </p>
+            <p class="pub-meta">
+              <span class="pub-venue">DIS’24 – 7th International Conference on the Dynamics of Information Systems</span>,
               <span class="pub-year">2024</span>
             </p>
             <div class="pub-links">
-              <!-- TODO: replace with real links or remove -->
-              <a href="#" target="_blank" rel="noopener noreferrer">DOI / PDF</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Slides / Materials</a>
             </div>
           </li>
 
-          <!-- Example publication 2 -->
+          <!-- Conference paper – Power smoothing -->
           <li class="pub-item" data-type="conference">
             <p class="pub-title">
-              [Example] Operational Strategies for Airborne Wind Energy Farms under Grid Constraints
+              Improving Power Smoothing of Airborne Wind Energy Farms by Sizing an Energy Storage System
             </p>
             <p class="pub-authors">
-              Rui Carvalho da Costa, Coauthor C
+              R. C. da Costa et al.
             </p>
             <p class="pub-meta">
-              <span class="pub-venue">IEEE Conference on Sustainable Power Systems</span>,
+              <span class="pub-venue">CONTROLO’24 – 16th APCA International Conference on Automatic Control and Soft Computing</span>,
+              <span class="pub-year">2024</span>
+            </p>
+            <div class="pub-links">
+              <a href="#" target="_blank" rel="noopener noreferrer">Conference paper</a>
+            </div>
+          </li>
+
+          <!-- Example preprint / thesis -->
+          <li class="pub-item" data-type="preprint">
+            <p class="pub-title">
+              Layout Optimization and Power Averaging of an Airborne Wind Energy Farm
+            </p>
+            <p class="pub-authors">
+              Rui Carvalho da Costa
+            </p>
+            <p class="pub-meta">
+              <span class="pub-venue">MSc Dissertation, FEUP</span>,
               <span class="pub-year">2023</span>
             </p>
             <div class="pub-links">
-              <a href="#" target="_blank" rel="noopener noreferrer">PDF</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Slides</a>
-            </div>
-          </li>
-
-          <!-- Example publication 3 -->
-          <li class="pub-item" data-type="preprint">
-            <p class="pub-title">
-              [Example] A Mixed-Integer Optimization Framework for Airborne Wind Farm Layout Design
-            </p>
-            <p class="pub-authors">
-              Rui Carvalho da Costa, Coauthor D
-            </p>
-            <p class="pub-meta">
-              <span class="pub-venue">arXiv preprint</span>,
-              <span class="pub-year">2022</span>
-            </p>
-            <div class="pub-links">
-              <a href="#" target="_blank" rel="noopener noreferrer">arXiv</a>
+              <a href="https://hdl.handle.net/10216/152150" target="_blank" rel="noopener noreferrer">Full text</a>
             </div>
           </li>
         </ol>
@@ -293,63 +426,95 @@
       <div class="container">
         <div class="section-header">
           <h2>Personal & Research Projects</h2>
-          <p>Selected projects with links to further details. (Replace with your own projects.)</p>
+          <p>Selected projects with GitHub repositories and talk recordings.</p>
         </div>
 
         <div class="projects-grid">
-          <!-- Example project 1 -->
+          <!-- Project 1 -->
           <article class="project-card">
-            <h3>[Example] Airborne Wind Farm Layout Tool</h3>
+            <h3>Airborne Wind Farm Layout Tool</h3>
             <p class="project-meta">Research · Optimization</p>
             <p class="project-description">
               Prototype tool for designing and evaluating layouts of airborne wind energy farms,
-              including wake interactions and operational constraints.
+              including wake interactions, land-use constraints and multi-objective optimization.
             </p>
             <div class="project-tags">
               <span class="chip small">Python</span>
-              <span class="chip small">Optimization</span>
+              <span class="chip small">Metaheuristics</span>
               <span class="chip small">Energy</span>
             </div>
             <div class="project-links">
-              <!-- TODO: replace with your own links -->
-              <a href="https://github.com/yourusername/layout-tool" target="_blank" rel="noopener noreferrer" class="btn mini">Code</a>
+              <!-- TODO: replace with your actual repository and YouTube links -->
+              <a href="https://github.com/ruiccosta10" target="_blank" rel="noopener noreferrer" class="btn mini">
+                GitHub
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn mini btn-yt">
+                YouTube demo
+              </a>
             </div>
           </article>
 
-          <!-- Example project 2 -->
+          <!-- Project 2 -->
           <article class="project-card">
-            <h3>[Example] Simulation of Airborne Wind Farm Operation</h3>
+            <h3>AWES Farm Operation Simulator</h3>
             <p class="project-meta">Research · Simulation</p>
             <p class="project-description">
-              Time-series simulation environment to study the operational characteristics of airborne
-              wind energy farms under variable wind conditions.
+              Time-series simulation environment to study operational characteristics of airborne
+              wind energy farms under variable wind conditions, different synchronization strategies
+              and storage configurations.
             </p>
             <div class="project-tags">
               <span class="chip small">Simulation</span>
               <span class="chip small">Numerical Methods</span>
+              <span class="chip small">Power Smoothing</span>
             </div>
             <div class="project-links">
-              <a href="https://github.com/yourusername/awes-sim" target="_blank" rel="noopener noreferrer" class="btn mini">Code</a>
+              <a href="https://github.com/ruiccosta10" target="_blank" rel="noopener noreferrer" class="btn mini">
+                GitHub
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn mini btn-yt">
+                YouTube overview
+              </a>
             </div>
           </article>
 
-          <!-- Example project 3 -->
+          <!-- Project 3 -->
           <article class="project-card">
-            <h3>[Example] Teaching Materials for Control</h3>
-            <p class="project-meta">Teaching</p>
+            <h3>Teaching Materials for Control</h3>
+            <p class="project-meta">Teaching · Control</p>
             <p class="project-description">
-              Collection of notes, problem sets, and small simulations used for the Control course,
-              focused on helping students connect theory with practical examples.
+              Collection of notes, problem sets and simulations used in Control courses,
+              focusing on intuitive explanations and links to real-world energy systems.
             </p>
             <div class="project-tags">
               <span class="chip small">Control</span>
               <span class="chip small">Teaching</span>
+              <span class="chip small">Python / MATLAB</span>
             </div>
             <div class="project-links">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="btn mini">Materials</a>
+              <a href="https://github.com/ruiccosta10" target="_blank" rel="noopener noreferrer" class="btn mini">
+                GitHub
+              </a>
+              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn mini btn-yt">
+                Lecture clips
+              </a>
             </div>
           </article>
         </div>
+
+        <!-- GitHub contributions heatmap -->
+        <section class="github-section" aria-label="GitHub contributions">
+          <h3>GitHub Contributions Heatmap</h3>
+          <p class="github-text">
+            An overview of my recent activity on GitHub (<code>ruiccosta10</code>).
+          </p>
+          <div class="github-heatmap">
+            <!-- Simple image-based heatmap embed; you can swap this for any preferred service -->
+            <img
+              src="https://ghchart.rshah.org/ruiccosta10"
+              alt="GitHub contributions heatmap for user ruiccosta10">
+          </div>
+        </section>
       </div>
     </section>
 
@@ -358,18 +523,35 @@
       <div class="container">
         <div class="section-header">
           <h2>Contact</h2>
-          <p>Feel free to reach out regarding research, teaching, or collaboration.</p>
+          <p>Feel free to reach out regarding research, teaching or collaboration.</p>
         </div>
 
         <div class="contact-layout">
           <div class="contact-info">
             <ul class="contact-list">
-              <!-- TODO: change to your real email and links -->
-              <li><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></li>
-              <li><strong>Office:</strong> Electrical and Computer Engineering, FEUP, Porto, Portugal</li>
-              <li><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">github.com/yourusername</a></li>
-              <li><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener noreferrer">Your LinkedIn</a></li>
-              <li><strong>Google Scholar:</strong> <a href="#" target="_blank" rel="noopener noreferrer">Your Scholar Profile</a></li>
+              <li>
+                <strong>Email:</strong>
+                <a href="mailto:ruicarcosta@gmail.com">ruicarcosta@gmail.com</a>
+              </li>
+              <li>
+                <strong>Office:</strong> Electrical and Computer Engineering, FEUP, Porto, Portugal
+              </li>
+              <li>
+                <strong>GitHub:</strong>
+                <a href="https://github.com/ruiccosta10" target="_blank" rel="noopener noreferrer">
+                  github.com/ruiccosta10
+                </a>
+              </li>
+              <li>
+                <strong>LinkedIn:</strong>
+                <a href="https://www.linkedin.com/in/ruiccosta/" target="_blank" rel="noopener noreferrer">
+                  linkedin.com/in/ruiccosta
+                </a>
+              </li>
+              <li>
+                <strong>Google Scholar:</strong>
+                <a href="#" target="_blank" rel="noopener noreferrer">Google Scholar profile</a>
+              </li>
             </ul>
           </div>
 
@@ -387,7 +569,8 @@
 
             <div class="form-group">
               <label for="message">Message</label>
-              <textarea id="message" name="message" rows="4" placeholder="How can we collaborate?" required></textarea>
+              <textarea id="message" name="message" rows="4"
+                placeholder="How can we collaborate?" required></textarea>
             </div>
 
             <button type="submit" class="btn primary">Send Message</button>
@@ -407,4 +590,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

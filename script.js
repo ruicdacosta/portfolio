@@ -59,7 +59,78 @@ filterButtons.forEach((btn) => {
 document.addEventListener("submit", (e) => {
   if (e.target.matches(".contact-form")) {
     e.preventDefault();
-    alert("Thanks for your message! (Note: this form is a static demo; connect a backend or service to receive emails.)");
+    alert(
+      "Thanks for your message! (Note: this form is a static demo; connect a backend or service to receive emails.)"
+    );
     e.target.reset();
   }
 });
+
+// -------------------------
+// Theme handling
+// -------------------------
+const root = document.documentElement;
+const themeToggle = document.getElementById("themeToggle");
+const themePicker = document.getElementById("themePicker");
+
+function applyTheme(mode, scheme) {
+  const safeMode = mode === "dark" ? "dark" : "light";
+  const safeScheme =
+    scheme === "retro" || scheme === "terminal" ? scheme : "default";
+
+  root.setAttribute("data-mode", safeMode);
+  root.setAttribute("data-scheme", safeScheme);
+
+  if (themeToggle) {
+    themeToggle.textContent = safeMode === "dark" ? "☀️" : "🌙";
+    themeToggle.setAttribute(
+      "aria-label",
+      safeMode === "dark" ? "Switch to light mode" : "Switch to dark mode"
+    );
+  }
+
+  if (themePicker) {
+    themePicker.value = safeScheme;
+  }
+
+  try {
+    localStorage.setItem("colorMode", safeMode);
+    localStorage.setItem("themeScheme", safeScheme);
+  } catch {
+    // ignore if localStorage is unavailable
+  }
+}
+
+// Initialize theme from storage or defaults
+(function initTheme() {
+  let storedMode = "light";
+  let storedScheme = "default";
+
+  try {
+    storedMode = localStorage.getItem("colorMode") || storedMode;
+    storedScheme = localStorage.getItem("themeScheme") || storedScheme;
+  } catch {
+    // ignore
+  }
+
+  applyTheme(storedMode, storedScheme);
+})();
+
+// Toggle dark / light mode
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const currentMode = root.getAttribute("data-mode") || "light";
+    const nextMode = currentMode === "dark" ? "light" : "dark";
+    const currentScheme = root.getAttribute("data-scheme") || "default";
+    applyTheme(nextMode, currentScheme);
+  });
+}
+
+// Custom theme picker (default / retro / terminal)
+if (themePicker) {
+  themePicker.addEventListener("change", (e) => {
+    const chosenScheme = e.target.value;
+    const currentMode = root.getAttribute("data-mode") || "light";
+    applyTheme(currentMode, chosenScheme);
+  });
+}
