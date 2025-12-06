@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-mode="light" data-scheme="default">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,7 +23,21 @@
       <a href="#top" class="logo">Rui Carvalho da Costa</a>
 
       <nav class="nav">
-        <!-- Theme controls -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Journey</a></li>
+          <li><a href="#research-projects">Research & Projects</a></li>
+          <li><a href="#hobbies">Hobbies</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Theme controls: right side, below tabs -->
         <div class="theme-controls">
           <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
             🌙
@@ -35,21 +50,6 @@
             <option value="terminal">Linux terminal</option>
           </select>
         </div>
-
-        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-          <span class="nav-toggle-line"></span>
-          <span class="nav-toggle-line"></span>
-        </button>
-
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Journey</a></li>
-          <li><a href="#interests">Interests</a></li>
-          <li><a href="#hobbies">Hobbies & Languages</a></li>
-          <li><a href="#publications">Publications</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
       </nav>
     </div>
   </header>
@@ -62,6 +62,20 @@
           <div class="profile-photo-wrapper">
             <!-- Image now inside images/ folder -->
             <img src="images/rui.jpg" alt="Portrait of Rui Carvalho da Costa" class="profile-photo">
+          </div>
+
+          <!-- Links that were at the bottom, now also directly under the image -->
+          <div class="hero-links">
+            <a href="mailto:ruicarcosta@gmail.com" class="hero-link">Email</a>
+            <a href="https://github.com/ruiccosta10" target="_blank" rel="noopener noreferrer" class="hero-link">
+              GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/ruiccosta/" target="_blank" rel="noopener noreferrer" class="hero-link">
+              LinkedIn
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="hero-link">
+              Google Scholar
+            </a>
           </div>
         </div>
 
@@ -92,18 +106,12 @@
               <span class="meta-label">Location</span>
               <span class="meta-value">Porto, Portugal</span>
             </div>
-            <div class="meta-item">
-              <span class="meta-label">Teaching</span>
-              <span class="meta-value">
-                Invited Assistant (Control), 2025<br>
-                Invited Assistant (Algebra), 2025/2026
-              </span>
-            </div>
+            <!-- Teaching moved out of hero to its own section -->
           </div>
 
           <div class="hero-actions">
             <a href="#publications" class="btn primary">View Publications</a>
-            <a href="#projects" class="btn ghost">Explore Projects</a>
+            <a href="#research-projects" class="btn ghost">Explore Projects</a>
           </div>
         </div>
       </div>
@@ -143,7 +151,7 @@
               </p>
               <p class="timeline-description">
                 Teaching in <em>Control</em> and <em>Algebra</em> for Electrical and Computer Engineering students,
-                bridging rigorous theory with optimization and energy systems applications. :contentReference[oaicite:1]{index=1}
+                bridging rigorous theory with optimization and energy systems applications.
               </p>
             </div>
           </article>
@@ -154,11 +162,11 @@
             <div class="timeline-content">
               <h3>Advanced Studies in Engineering Project</h3>
               <p class="timeline-meta">
-                FEUP · Porto, Portugal · 2023 – 2024 · Grade: 19/20
+                FEUP · Porto, Portugal · 2023 – 2024
               </p>
               <p class="timeline-description">
                 Advanced project work in engineering and related techniques, with a focus on energy and optimization
-                problems. :contentReference[oaicite:2]{index=2}
+                problems.
               </p>
             </div>
           </article>
@@ -174,7 +182,7 @@
               <p class="timeline-description">
                 Dissertation:
                 <em>"Layout Optimization and Power Averaging of an Airborne Wind Energy Farm"</em>, studying optimal
-                kite farm layout and synchronization strategies for power smoothing. :contentReference[oaicite:3]{index=3}
+                kite farm layout and synchronization strategies for power smoothing.
               </p>
             </div>
           </article>
@@ -189,7 +197,7 @@
               </p>
               <p class="timeline-description">
                 Foundations in mathematics, programming, electronics, systems and control, with a major in
-                <strong>Energy</strong>. :contentReference[oaicite:4]{index=4}
+                <strong>Energy</strong>.
               </p>
             </div>
           </article>
@@ -204,7 +212,7 @@
               </p>
               <p class="timeline-description">
                 Participation in projects on airborne wind farm layout, power smoothing and microelectronics-related
-                applications, including KEFCODE and the Microelectronics Agenda. :contentReference[oaicite:5]{index=5}
+                applications, including KEFCODE and the Microelectronics Agenda.
               </p>
             </div>
           </article>
@@ -219,7 +227,7 @@
               </p>
               <p class="timeline-description">
                 Best Presentation Award, Entrepreneurship and Innovation Award (BIP PROOF) and recognition by the EIT
-                Deep Tech Talent Initiative, among others. :contentReference[oaicite:6]{index=6}
+                Deep Tech Talent Initiative, among others.
               </p>
             </div>
           </article>
@@ -227,16 +235,18 @@
       </div>
     </section>
 
-    <!-- Research & Engineering Interests -->
-    <section id="interests" class="section section-alt">
+    <!-- Combined: Research & Engineering Interests + Projects + GitHub contributions -->
+    <section id="research-projects" class="section section-alt">
       <div class="container">
         <div class="section-header">
-          <h2>Research & Engineering Interests</h2>
-          <p>Problems at the intersection of optimization, control and energy systems.</p>
+          <h2>Research & Projects</h2>
+          <p>Research topics, tools and selected projects in airborne wind energy and energy systems.</p>
         </div>
 
+        <!-- Research & Engineering Interests -->
         <div class="interests-layout">
           <div class="interests-text">
+            <h3>Research & Engineering Interests</h3>
             <p>
               My work focuses on the modeling, optimization and control of renewable energy systems,
               especially <strong>airborne wind energy farms</strong> and their integration into power systems.
@@ -259,6 +269,100 @@
             <span class="chip">Simulation & Numerical Methods</span>
           </div>
         </div>
+
+        <!-- Projects -->
+        <div class="projects-block">
+          <h3 class="projects-heading">Personal & Research Projects</h3>
+          <p class="projects-intro">
+            A selection of tools and simulations around airborne wind energy farms and teaching.
+          </p>
+
+          <div class="projects-grid">
+            <!-- Project 1 -->
+            <article class="project-card">
+              <h3>Airborne Wind Farm Layout Tool</h3>
+              <p class="project-meta">Research · Optimization</p>
+              <p class="project-description">
+                Prototype tool for designing and evaluating layouts of airborne wind energy farms,
+                including wake interactions, land-use constraints and multi-objective optimization.
+              </p>
+              <div class="project-tags">
+                <span class="chip small">Python</span>
+                <span class="chip small">Metaheuristics</span>
+                <span class="chip small">Energy</span>
+              </div>
+              <div class="project-links">
+                <!-- Replace with your actual repos and videos when ready -->
+                <a href="https://github.com/ruiccosta10" target="_blank" rel="noopener noreferrer" class="btn mini">
+                  GitHub
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn mini btn-yt">
+                  YouTube demo
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 2 -->
+            <article class="project-card">
+              <h3>AWES Farm Operation Simulator</h3>
+              <p class="project-meta">Research · Simulation</p>
+              <p class="project-description">
+                Time-series simulation environment to study airborne wind energy farms under variable wind conditions,
+                synchronization strategies and energy storage configurations.
+              </p>
+              <div class="project-tags">
+                <span class="chip small">Simulation</span>
+                <span class="chip small">Numerical Methods</span>
+                <span class="chip small">Power Smoothing</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ruiccosta10" target="_blank" rel="noopener noreferrer" class="btn mini">
+                  GitHub
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn mini btn-yt">
+                  YouTube overview
+                </a>
+              </div>
+            </article>
+
+            <!-- Project 3 -->
+            <article class="project-card">
+              <h3>Teaching Materials for Control</h3>
+              <p class="project-meta">Teaching · Control</p>
+              <p class="project-description">
+                Notes, problem sets and simulations used in Control courses,
+                with emphasis on intuitive explanations and connections to energy systems.
+              </p>
+              <div class="project-tags">
+                <span class="chip small">Control</span>
+                <span class="chip small">Teaching</span>
+                <span class="chip small">Python / MATLAB</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/ruiccosta10" target="_blank" rel="noopener noreferrer" class="btn mini">
+                  GitHub
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn mini btn-yt">
+                  Lecture clips
+                </a>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- GitHub contributions heatmap (user-wide, not repo-specific) -->
+        <section class="github-section" aria-label="GitHub contributions">
+          <h3>GitHub Contributions</h3>
+          <p class="github-text">
+            Overview of my recent public GitHub activity as <code>ruiccosta10</code> (all public repositories).
+          </p>
+          <div class="github-heatmap">
+            <!-- This chart is generated from the GitHub username, not a single repo -->
+            <img
+              src="https://ghchart.rshah.org/ruiccosta10"
+              alt="GitHub contributions heatmap for user ruiccosta10">
+          </div>
+        </section>
       </div>
     </section>
 
@@ -285,13 +389,53 @@
               </li>
               <li>
                 <strong>Reading:</strong> fiction and reflective literature, especially
-                <em>Métamorphosis</em> and <em>The Alchemist</em>.
+                <em>Metamorphosis</em> and <em>The Alchemist</em>.
               </li>
               <li>
-                <strong>Languages:</strong> Portuguese (native), English (B2) and French (A2). :contentReference[oaicite:7]{index=7}
+                <strong>Languages:</strong> Portuguese (native), English, and French (A2).
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Teaching section -->
+    <section id="teaching" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Teaching</h2>
+          <p>Courses where I have taken an active teaching role.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Control</h3>
+              <p class="timeline-meta">
+                Invited Assistant Lecturer · FEUP · 2025
+              </p>
+              <p class="timeline-description">
+                Practical approach to classical control, with emphasis on intuition, frequency-domain analysis and
+                applications to energy systems.
+              </p>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>Algebra</h3>
+              <p class="timeline-meta">
+                Invited Assistant Lecturer · FEUP · 2025/2026
+              </p>
+              <p class="timeline-description">
+                Linear algebra and related topics for Electrical and Computer Engineering students, connecting theory to
+                optimization and control.
+              </p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -301,7 +445,7 @@
       <div class="container">
         <div class="section-header">
           <h2>Publications & Papers</h2>
-          <p>Selected peer-reviewed work and preprints on airborne wind energy farms and energy systems. :contentReference[oaicite:8]{index=8}</p>
+          <p>Selected peer-reviewed work and preprints on airborne wind energy farms and energy systems.</p>
         </div>
 
         <div class="pub-filters">
@@ -417,103 +561,6 @@
             </div>
           </li>
         </ol>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <h2>Personal & Research Projects</h2>
-          <p>Selected projects with GitHub repositories and talk recordings.</p>
-        </div>
-
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <article class="project-card">
-            <h3>Airborne Wind Farm Layout Tool</h3>
-            <p class="project-meta">Research · Optimization</p>
-            <p class="project-description">
-              Prototype tool for designing and evaluating layouts of airborne wind energy farms,
-              including wake interactions, land-use constraints and multi-objective optimization.
-            </p>
-            <div class="project-tags">
-              <span class="chip small">Python</span>
-              <span class="chip small">Metaheuristics</span>
-              <span class="chip small">Energy</span>
-            </div>
-            <div class="project-links">
-              <!-- TODO: replace with your actual repository and YouTube links -->
-              <a href="https://github.com/ruiccosta10" target="_blank" rel="noopener noreferrer" class="btn mini">
-                GitHub
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn mini btn-yt">
-                YouTube demo
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 2 -->
-          <article class="project-card">
-            <h3>AWES Farm Operation Simulator</h3>
-            <p class="project-meta">Research · Simulation</p>
-            <p class="project-description">
-              Time-series simulation environment to study operational characteristics of airborne
-              wind energy farms under variable wind conditions, different synchronization strategies
-              and storage configurations.
-            </p>
-            <div class="project-tags">
-              <span class="chip small">Simulation</span>
-              <span class="chip small">Numerical Methods</span>
-              <span class="chip small">Power Smoothing</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/ruiccosta10" target="_blank" rel="noopener noreferrer" class="btn mini">
-                GitHub
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn mini btn-yt">
-                YouTube overview
-              </a>
-            </div>
-          </article>
-
-          <!-- Project 3 -->
-          <article class="project-card">
-            <h3>Teaching Materials for Control</h3>
-            <p class="project-meta">Teaching · Control</p>
-            <p class="project-description">
-              Collection of notes, problem sets and simulations used in Control courses,
-              focusing on intuitive explanations and links to real-world energy systems.
-            </p>
-            <div class="project-tags">
-              <span class="chip small">Control</span>
-              <span class="chip small">Teaching</span>
-              <span class="chip small">Python / MATLAB</span>
-            </div>
-            <div class="project-links">
-              <a href="https://github.com/ruiccosta10" target="_blank" rel="noopener noreferrer" class="btn mini">
-                GitHub
-              </a>
-              <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="btn mini btn-yt">
-                Lecture clips
-              </a>
-            </div>
-          </article>
-        </div>
-
-        <!-- GitHub contributions heatmap -->
-        <section class="github-section" aria-label="GitHub contributions">
-          <h3>GitHub Contributions Heatmap</h3>
-          <p class="github-text">
-            An overview of my recent activity on GitHub (<code>ruiccosta10</code>).
-          </p>
-          <div class="github-heatmap">
-            <!-- Simple image-based heatmap embed; you can swap this for any preferred service -->
-            <img
-              src="https://ghchart.rshah.org/ruiccosta10"
-              alt="GitHub contributions heatmap for user ruiccosta10">
-          </div>
-        </section>
       </div>
     </section>
 

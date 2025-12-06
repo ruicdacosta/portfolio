@@ -101,7 +101,7 @@ function applyTheme(mode, scheme) {
   }
 }
 
-// Initialize theme from storage or defaults, after DOM is ready
+// Initialize theme from storage or defaults
 document.addEventListener("DOMContentLoaded", () => {
   let storedMode = "light";
   let storedScheme = "default";

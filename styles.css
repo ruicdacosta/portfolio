@@ -25,7 +25,7 @@
   --font-base: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* Explicit light mode (same as base, but ensures reset if needed) */
+/* Explicit light mode */
 :root[data-mode="light"] {
   --bg: #f4f5f7;
   --bg-alt: #ffffff;
@@ -53,14 +53,14 @@
   --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* Retro scheme (accent + soft look) */
+/* Retro scheme */
 :root[data-scheme="retro"] {
   --accent: #f97316;
   --accent-soft: rgba(249, 115, 22, 0.12);
   --accent-strong: rgba(249, 115, 22, 0.22);
 }
 
-/* Linux terminal scheme (accent + monospace font) */
+/* Linux terminal scheme */
 :root[data-scheme="terminal"] {
   --accent: #22c55e;
   --accent-soft: rgba(34, 197, 94, 0.12);
@@ -80,7 +80,6 @@ body {
   background: var(--bg);
   color: var(--text-main);
 }
-
 
 /* Layout helpers */
 .container {
@@ -139,8 +138,9 @@ body {
 /* Nav */
 .nav {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.35rem;
 }
 
 .nav-links {
@@ -181,12 +181,11 @@ body {
   transform: scaleX(1);
 }
 
-/* Theme controls in header */
+/* Theme controls under tabs (desktop) */
 .theme-controls {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  margin-right: 0.75rem;
 }
 
 .theme-toggle {
@@ -266,6 +265,29 @@ body {
   border-radius: 999px;
   object-fit: cover;
   border: 4px solid var(--accent-soft);
+}
+
+/* Links under the hero image */
+.hero-links {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.hero-link {
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: var(--accent);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--accent-soft);
+  padding: 0.2rem 0.7rem;
+  background: var(--surface);
+}
+
+.hero-link:hover {
+  background: var(--accent-soft);
 }
 
 .hero-right h1 {
@@ -361,7 +383,7 @@ body {
   gap: 0.75rem;
 }
 
-/* Timeline (Journey) */
+/* Timeline */
 .timeline {
   position: relative;
   margin-top: 1rem;
@@ -402,7 +424,7 @@ body {
   font-size: 0.9rem;
 }
 
-/* Interests */
+/* Interests & Research */
 .interests-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.7fr) minmax(0, 1.5fr);
@@ -447,6 +469,95 @@ body {
   background: var(--accent-strong);
   border-color: var(--accent);
   color: var(--accent);
+}
+
+/* Projects */
+.projects-block {
+  margin-top: 3rem;
+}
+
+.projects-heading {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.projects-intro {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 1.3rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  padding: 1.25rem 1.2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.project-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.project-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.7rem;
+}
+
+.project-description {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.7rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.7rem;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+/* GitHub section with heatmap */
+.github-section {
+  margin-top: 3rem;
+}
+
+.github-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+
+.github-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.github-heatmap {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-subtle);
+  padding: 1rem;
+  background: var(--surface);
+}
+
+.github-heatmap img {
+  max-width: 100%;
+  display: block;
 }
 
 /* Publications */
@@ -496,80 +607,6 @@ body {
   padding: 0.2rem 0.55rem;
   border-radius: var(--radius-full);
   background: var(--accent-soft);
-}
-
-/* Projects */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.5rem;
-}
-
-.project-card {
-  background: var(--surface);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
-  padding: 1.25rem 1.2rem;
-  box-shadow: var(--shadow-soft);
-}
-
-.project-card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 0.4rem;
-}
-
-.project-meta {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 0.7rem;
-}
-
-.project-description {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 0.7rem;
-}
-
-.project-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-  margin-bottom: 0.7rem;
-}
-
-.project-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
-}
-
-/* GitHub section with heatmap */
-.github-section {
-  margin-top: 2.5rem;
-}
-
-.github-section h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
-}
-
-.github-text {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 1rem;
-}
-
-.github-heatmap {
-  overflow-x: auto;
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--border-subtle);
-  padding: 1rem;
-  background: var(--surface);
-}
-
-.github-heatmap img {
-  max-width: 100%;
-  display: block;
 }
 
 /* Contact */
@@ -684,6 +721,10 @@ textarea:focus {
     display: flex;
   }
 
+  .nav {
+    align-items: flex-end;
+  }
+
   .nav-links {
     position: absolute;
     inset-inline: 0;
@@ -705,9 +746,8 @@ textarea:focus {
     pointer-events: auto;
   }
 
-  .theme-controls {
-    display: none;
-  }
+  /* To avoid layout clutter on small screens, you can hide theme controls or keep them.
+     For now we keep them visible. */
 }
 
 @media (max-width: 640px) {
