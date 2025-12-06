@@ -1,26 +1,381 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name – Engineering Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Your Name</a>
 
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+      <nav class="nav">
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+          <span class="nav-toggle-line"></span>
+          <span class="nav-toggle-line"></span>
+        </button>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#interests">Interests</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <main id="top">
+    <!-- Hero / About -->
+    <section id="about" class="section hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <div class="profile-photo-wrapper">
+            <!-- Replace src with your actual photo path -->
+            <img src="your-photo.jpg" alt="Portrait of Your Name" class="profile-photo">
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <p class-name="eyebrow">Academic Portfolio</p>
+          <h1>Your Name</h1>
+          <p class="hero-subtitle">
+            PhD candidate in <strong>Electrical Engineering</strong> with a focus on
+            <strong>Control Systems</strong> and <strong>Robotics</strong>.
+          </p>
+
+          <p class="hero-description">
+            I am an engineering researcher interested in building robust and
+            interpretable systems that bridge theory and real-world applications.
+            My work spans modeling, optimization, and experimental validation.
+          </p>
+
+          <div class="hero-meta">
+            <div class="meta-item">
+              <span class="meta-label">Affiliation</span>
+              <span class="meta-value">Department of XYZ, Some University</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Location</span>
+              <span class="meta-value">City, Country</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#publications" class="btn primary">View Publications</a>
+            <a href="#projects" class="btn ghost">Explore Projects</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Academic Path</h2>
+          <p>A brief overview of my formal education in engineering.</p>
+        </div>
+
+        <div class="timeline">
+          <!-- PhD -->
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>PhD in [Engineering Field]</h3>
+              <p class="timeline-meta">
+                [University Name] · [City, Country] · [Start Year] – [Expected Graduation]
+              </p>
+              <p class="timeline-description">
+                Thesis: <em>"Your thesis title goes here"</em>  
+                Supervised by <strong>Prof. X</strong>. Focus on [key topics, e.g. nonlinear control, optimization, robotics].
+              </p>
+            </div>
+          </article>
+
+          <!-- MSc 1 -->
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>MSc in [Engineering Field]</h3>
+              <p class="timeline-meta">
+                [University Name] · [City, Country] · [Year] – [Year]
+              </p>
+              <p class="timeline-description">
+                Dissertation: <em>"Title of your MSc dissertation"</em>.  
+                Main topics: [topic 1], [topic 2], [topic 3].
+              </p>
+            </div>
+          </article>
+
+          <!-- MSc 2 -->
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>MSc in [Engineering Field]</h3>
+              <p class="timeline-meta">
+                [University Name] · [City, Country] · [Year] – [Year]
+              </p>
+              <p class="timeline-description">
+                Specialized in [specialization]. Coursework and projects focused on
+                [brief summary].
+              </p>
+            </div>
+          </article>
+
+          <!-- Optional BSc -->
+          <article class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <h3>BSc in [Engineering Field]</h3>
+              <p class="timeline-meta">
+                [University Name] · [City, Country] · [Year] – [Year]
+              </p>
+              <p class="timeline-description">
+                Foundation in core engineering, mathematics, and computer science.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests -->
+    <section id="interests" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Research & Engineering Interests</h2>
+          <p>Areas I enjoy working on and exploring.</p>
+        </div>
+
+        <div class="interests-layout">
+          <div class="interests-text">
+            <p>
+              My research and engineering interests are centered around the
+              development of reliable, explainable, and efficient systems.
+              I enjoy working across the spectrum from theory to deployment.
+            </p>
+            <p>
+              I am particularly interested in collaborating on interdisciplinary
+              projects that connect engineering with domains such as healthcare,
+              energy, and autonomous systems.
+            </p>
+          </div>
+
+          <div class="interest-chips">
+            <!-- Replace / add your own interests -->
+            <span class="chip">Control Systems</span>
+            <span class="chip">Robotics</span>
+            <span class="chip">Optimization</span>
+            <span class="chip">Signal Processing</span>
+            <span class="chip">Embedded Systems</span>
+            <span class="chip">Machine Learning</span>
+            <span class="chip">Autonomous Systems</span>
+            <span class="chip">Systems Identification</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Publications & Papers</h2>
+          <p>A selection of peer-reviewed papers and preprints.</p>
+        </div>
+
+        <div class="pub-filters">
+          <button class="chip chip-filter active" data-filter="all">All</button>
+          <button class="chip chip-filter" data-filter="journal">Journals</button>
+          <button class="chip chip-filter" data-filter="conference">Conferences</button>
+          <button class="chip chip-filter" data-filter="preprint">Preprints</button>
+        </div>
+
+        <ol class="pub-list">
+          <!-- Example publication -->
+          <li class="pub-item" data-type="journal">
+            <p class="pub-title">
+              "Title of Your Journal Paper"
+            </p>
+            <p class="pub-authors">
+              Your Name, Coauthor A, Coauthor B
+            </p>
+            <p class="pub-meta">
+              <span class="pub-venue">Journal of Something Engineering</span>,
+              <span class="pub-year">2024</span>
+            </p>
+            <div class="pub-links">
+              <a href="https://doi.org/xx.xxxx/xxxxx" target="_blank" rel="noopener noreferrer">DOI</a>
+              <a href="paper1.pdf" target="_blank" rel="noopener noreferrer">PDF</a>
+              <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" rel="noopener noreferrer">arXiv</a>
+            </div>
+          </li>
+
+          <li class="pub-item" data-type="conference">
+            <p class="pub-title">
+              "Title of Your Conference Paper"
+            </p>
+            <p class="pub-authors">
+              Your Name, Coauthor C
+            </p>
+            <p class="pub-meta">
+              <span class="pub-venue">IEEE Conference on Cool Stuff</span>,
+              <span class="pub-year">2023</span>
+            </p>
+            <div class="pub-links">
+              <a href="#" target="_blank" rel="noopener noreferrer">PDF</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Slides</a>
+            </div>
+          </li>
+
+          <li class="pub-item" data-type="preprint">
+            <p class="pub-title">
+              "Title of Your Preprint"
+            </p>
+            <p class="pub-authors">
+              Your Name, Coauthor D
+            </p>
+            <p class="pub-meta">
+              <span class="pub-venue">arXiv preprint</span>,
+              <span class="pub-year">2022</span>
+            </p>
+            <div class="pub-links">
+              <a href="https://arxiv.org/abs/xxxx.xxxxx" target="_blank" rel="noopener noreferrer">arXiv</a>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Personal & Research Projects</h2>
+          <p>Selected projects, with links to more details or code.</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <h3>Autonomous Drone Control</h3>
+            <p class="project-meta">2024 · Research / Robotics</p>
+            <p class="project-description">
+              Designed and implemented a model predictive controller for a
+              quadrotor platform, enabling robust trajectory tracking in
+              the presence of disturbances.
+            </p>
+            <div class="project-tags">
+              <span class="chip small">MPC</span>
+              <span class="chip small">ROS</span>
+              <span class="chip small">C++</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/yourusername/project1" target="_blank" rel="noopener noreferrer" class="btn mini">Code</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn mini ghost">Video</a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <h3>Signal Processing Toolkit</h3>
+            <p class="project-meta">2023 · Personal</p>
+            <p class="project-description">
+              Developed a Python toolkit for rapid prototyping of filtering,
+              spectral analysis, and system identification routines used in my research.
+            </p>
+            <div class="project-tags">
+              <span class="chip small">Python</span>
+              <span class="chip small">NumPy</span>
+              <span class="chip small">SciPy</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/yourusername/project2" target="_blank" rel="noopener noreferrer" class="btn mini">Code</a>
+              <a href="#" target="_blank" rel="noopener noreferrer" class="btn mini ghost">Docs</a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <h3>Embedded Control Board</h3>
+            <p class="project-meta">2022 · Hardware</p>
+            <p class="project-description">
+              Designed a custom embedded control board for real-time data
+              acquisition and actuation in laboratory experiments.
+            </p>
+            <div class="project-tags">
+              <span class="chip small">Embedded</span>
+              <span class="chip small">ARM</span>
+              <span class="chip small">C</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/yourusername/project3" target="_blank" rel="noopener noreferrer" class="btn mini">Design Files</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Feel free to reach out for collaboration, questions, or opportunities.</p>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-info">
+            <ul class="contact-list">
+              <li><strong>Email:</strong> <a href="mailto:you@example.com">you@example.com</a></li>
+              <li><strong>Office:</strong> Room X.Y, Building Z, Some University</li>
+              <li><strong>GitHub:</strong> <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">github.com/yourusername</a></li>
+              <li><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener noreferrer">Your LinkedIn</a></li>
+              <li><strong>Google Scholar:</strong> <a href="#" target="_blank" rel="noopener noreferrer">Scholar Profile</a></li>
+            </ul>
+          </div>
+
+          <form class="contact-form">
+            <!-- Static form – needs backend or service to actually send messages -->
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="How can we collaborate?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+      <p class="footer-secondary">Last updated: <!-- You can manually fill this --> 2025.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
