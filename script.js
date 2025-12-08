@@ -67,35 +67,26 @@ document.addEventListener("submit", (e) => {
 });
 
 // -------------------------
-// Theme handling
+// Linux-terminal theme handling (light / dark)
 // -------------------------
 const root = document.documentElement;
 const themeToggle = document.getElementById("themeToggle");
-const themePicker = document.getElementById("themePicker");
 
-function applyTheme(mode, scheme) {
+function applyMode(mode) {
   const safeMode = mode === "dark" ? "dark" : "light";
-  const safeScheme =
-    scheme === "retro" || scheme === "terminal" ? scheme : "default";
-
   root.setAttribute("data-mode", safeMode);
-  root.setAttribute("data-scheme", safeScheme);
 
   if (themeToggle) {
-    themeToggle.textContent = safeMode === "dark" ? "☀️" : "🌙";
+    const isDark = safeMode === "dark";
+    themeToggle.textContent = isDark ? "☀️" : "🌙";
     themeToggle.setAttribute(
       "aria-label",
-      safeMode === "dark" ? "Switch to light mode" : "Switch to dark mode"
+      isDark ? "Switch to light mode" : "Switch to dark mode"
     );
-  }
-
-  if (themePicker) {
-    themePicker.value = safeScheme;
   }
 
   try {
     localStorage.setItem("colorMode", safeMode);
-    localStorage.setItem("themeScheme", safeScheme);
   } catch {
     // localStorage might be blocked, ignore
   }
@@ -104,16 +95,14 @@ function applyTheme(mode, scheme) {
 // Initialize theme from storage or defaults
 document.addEventListener("DOMContentLoaded", () => {
   let storedMode = "light";
-  let storedScheme = "default";
 
   try {
     storedMode = localStorage.getItem("colorMode") || storedMode;
-    storedScheme = localStorage.getItem("themeScheme") || storedScheme;
   } catch {
     // ignore
   }
 
-  applyTheme(storedMode, storedScheme);
+  applyMode(storedMode);
 });
 
 // Toggle dark / light mode
@@ -121,16 +110,6 @@ if (themeToggle) {
   themeToggle.addEventListener("click", () => {
     const currentMode = root.getAttribute("data-mode") || "light";
     const nextMode = currentMode === "dark" ? "light" : "dark";
-    const currentScheme = root.getAttribute("data-scheme") || "default";
-    applyTheme(nextMode, currentScheme);
-  });
-}
-
-// Custom theme picker (default / retro / terminal)
-if (themePicker) {
-  themePicker.addEventListener("change", (e) => {
-    const chosenScheme = e.target.value;
-    const currentMode = root.getAttribute("data-mode") || "light";
-    applyTheme(currentMode, chosenScheme);
+    applyMode(nextMode);
   });
 }
